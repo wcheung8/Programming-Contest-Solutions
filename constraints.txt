@@ -1,0 +1,3 @@
+basic operations 	- 10^6
+permutations 		- 10!
+subsets 			- 20

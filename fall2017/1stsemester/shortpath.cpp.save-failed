@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+
+const int INF = 1e10;
+const int mx = 1e5;
+
+int n, m, x;
+vi closest(mx, INF);
+vvi el(mx);
+
+int main() {
+  ios::sync_with_stdio(0);
+
+  cin >> n >> m;
+  for(int i = 0; i<n; i++) {
+        cin >> x;
+        pq.push({0, x});
+  }
+
+  while(!pq.empty()) {
+    cout<<pq.top();
+    pq.pop();
+  }
+  for(int i = 0; i<m ; i++) {
+    int a,b,w;
+    cin >> a >> b >> w;
+    el[a].push_back({b,w});
+    el[b].push_back({a,w});
+  }
+
+
+
+  return 0;
+}
