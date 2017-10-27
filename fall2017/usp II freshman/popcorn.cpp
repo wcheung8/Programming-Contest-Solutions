@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
-#define ull unsigned long long
 using namespace std;
 typedef vector<int> vi;
 typedef vector<vi> vvi;
 
 const int INF = 1e7;
 
-int n;
+unsigned long long n;
 
 int main() {
     ios::sync_with_stdio(0);
     cin >> n;
+
+    cout << (n-1)*(n)/2 + 1;
+
     return 0;
 }

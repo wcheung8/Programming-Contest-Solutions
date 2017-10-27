@@ -7,11 +7,11 @@ typedef vector<vi> vvi;
 const int INF = 1e7;
 
 int n,d;
-vvi p(1000000, vi(2, -1));
-char s[1000000];
+vvi p(400000, vi(2, -10));
+char s[200000];
 
 void check(int i, int v) {
-    if(p[i][0] == -1)
+    if(p[i][0] == -10)
         p[i][0] = v;
 
     if(p[i][1] < v)
@@ -21,17 +21,16 @@ void check(int i, int v) {
 int main() {
   ios::sync_with_stdio(0);
   cin >> n >> s;
-  d = 500000;
-  d += s[0] == '0' ? -1 : 1;
-  check(d,0);
+  d = 200000;
+  check(d,-1);
 
-  for(int i = 1; i < n; i++) {
+  for(int i = 0; i < n; i++) {
         d += s[i] == '0' ? -1 : 1;
         check(d,i);
   }
 
   int m = 0;
-  for(int i = 0; i < 1000000; i++) {
+  for(int i = 0; i < 400000; i++) {
         m = max(m, p[i][1] - p[i][0]);
   }
   cout << m;
