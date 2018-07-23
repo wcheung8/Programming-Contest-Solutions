@@ -1,7 +1,0 @@
-Use square root decomposition
-    split into sqrt(n) buckets
-    Create M[0 ... sqrt(n)-1]
-    O(n) preprocess
-    O(sqrt(n)) time to query
-    
-Sparse table (gcd)
